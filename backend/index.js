@@ -27,7 +27,7 @@ app.use(API_URL + '/protected-2', verify2FA, (req, res) => {
   })
 });
 
-app.get(API_URL + '/robots.txt', (req, res) => {
+app.get('/robots.txt', (req, res) => {
   res.sendFile(path.resolve('../frontend/dist/robots.txt'));
 });
 
