@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /protected-1
+Disallow: /protected-2
+Allow: /
+Sitemap: https://phantomauth-website.onrender.com/sitemap.xml
