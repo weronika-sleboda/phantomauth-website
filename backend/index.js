@@ -14,13 +14,13 @@ const {app, verifyToken, verify2FA } = pa;
 
 app.use(express.static(path.resolve('../frontend/dist')));
 
-app.get(API_URL + '/protected-1', verifyToken, (req, res) => {
+app.post(API_URL + '/protected-1', verifyToken, (req, res) => {
   return res.status(200).json({
     success: true,
     message: 'Token verified'
   })
 });
-app.get(API_URL + '/protected-2', verify2FA, (req, res) => {
+app.post(API_URL + '/protected-2', verify2FA, (req, res) => {
   return res.status(200).json({
     success: true,
     message: '2FA verified'

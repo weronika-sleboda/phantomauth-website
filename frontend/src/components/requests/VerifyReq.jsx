@@ -10,7 +10,7 @@ export const VerifyReq = () => {
     e.preventDefault(); 
     setMessage('Loading...');
     try {
-      const res = await axios.get(`${API_URL}/protected-1`, {
+      const res = await axios.post(`${API_URL}/protected-1`, {
         withCredentials: true 
       });
       setMessage(JSON.stringify(res.data, null, 2));
