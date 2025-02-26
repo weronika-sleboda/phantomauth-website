@@ -28,7 +28,7 @@ app.use(API_URL + '/protected-2', verify2FA, (req, res) => {
 });
 
 // Catch-all route for React Router
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.resolve('../frontend/dist/index.html'));
 });
 
