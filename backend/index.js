@@ -12,6 +12,8 @@ const PORT = process.env.PORT;
 const pa = await phantomauth(MONGO_URI, API_URL);
 const {app, verifyToken, verify2FA } = pa;
 
+app.use(express.static(path.resolve('../frontend/dist')));
+
 app.post(API_URL + '/protected-1', verifyToken, (req, res) => {
   return res.status(200).json({
     success: true,
@@ -25,6 +27,14 @@ app.post(API_URL + '/protected-2', verify2FA, (req, res) => {
   })
 });
 
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.resolve('../frontend/dist/robots.txt'));
+});
+
+// Catch-all route for React Router
+app.use((req, res) => {
+  res.sendFile(path.resolve('../frontend/dist/index.html'));
+});
 
 app.listen(PORT, () => {
 
