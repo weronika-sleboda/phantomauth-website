@@ -1,2 +1,2 @@
-### PhantomAuth - Official Website
-## Includes: About, Demo, Docs and Tutorial section
+# PhantomAuth - Official Website
+### Includes: About, Demo, Docs and Tutorial section
