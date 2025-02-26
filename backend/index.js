@@ -27,10 +27,6 @@ app.post(API_URL + '/protected-2', verify2FA, (req, res) => {
   })
 });
 
-app.get('/robots.txt', (req, res) => {
-  res.sendFile(path.resolve('../frontend/dist/robots.txt'));
-});
-
 // Catch-all route for React Router
 app.use((req, res) => {
   res.sendFile(path.resolve('../frontend/dist/index.html'));
