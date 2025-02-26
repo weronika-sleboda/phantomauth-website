@@ -1,0 +1,13 @@
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: start;
+  font-size: 1.5rem;
+  color: rgb(180, 207, 231);
+}
+
+@media (max-width: 600px) {
+  .header {
+    font-size: 1.2rem;
+  }
+}

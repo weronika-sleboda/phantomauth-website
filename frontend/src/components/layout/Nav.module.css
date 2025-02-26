@@ -1,0 +1,83 @@
+.container {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: rgb(17, 25, 32);
+  padding-left: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.container ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.container li {
+  list-style: none;
+}
+
+.container  a {
+  padding: 1rem;
+  text-decoration: none;
+  height: 100%;
+  color: rgb(205, 224, 240);
+  transition: 0.2s ease-out;
+  font-size: 1.2rem;
+}
+
+.container a:hover {
+  font-size: 1.5rem;
+  color: rgb(205, 224, 240);
+}
+
+.container a:active {
+  font-size: 1.2rem;
+  color: rgb(123, 180, 228);
+  text-shadow: 0 0 8px rgb(123, 180, 228);
+  transition: 0.1s ease-in;
+}
+
+.container .active {
+  color: rgb(134, 200, 254);
+}
+
+.container a:focus-visible {
+  outline: 0.1rem solid rgb(79, 117, 150);
+  outline-color: rgb(144, 203, 255);
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0;
+    justify-content: center;
+  }
+  .container a {
+    font-size: 1rem;
+    padding: 0 0.3rem;
+  }
+  .container ul {
+    gap: 0.4rem;
+  }
+
+  .container a:hover {
+    font-size: 1.2rem;
+  }
+  .container a:active {
+    font-size: 0.9rem;
+  }
+}
+

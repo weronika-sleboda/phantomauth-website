@@ -1,0 +1,19 @@
+
+.code {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px rgb(64, 67, 70) solid;
+  background-color: rgb(29, 31, 33);
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .code {
+    font-size: 0.8rem;
+  }
+}
