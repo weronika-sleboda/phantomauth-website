@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/v1/auth': {
-        target: 'https://phantomauth-website.onrender.com',
+        target: 'http://localhost:5001',
         changeOrigin: true
       }
     }
