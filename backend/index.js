@@ -14,10 +14,6 @@ const {app, verifyToken, verify2FA } = pa;
 
 app.use(express.static(path.resolve('../frontend/dist')));
 
-app.get(API_URL + '/robots.txt', (req, res) => {
-  res.sendFile(path.resolve('../frontend/public/robots.txt'));
-});
-
 app.use(API_URL + '/protected-1', verifyToken, (req, res) => {
   return res.status(200).json({
     success: true,
@@ -29,6 +25,10 @@ app.use(API_URL + '/protected-2', verify2FA, (req, res) => {
     success: true,
     message: '2FA verified'
   })
+});
+
+app.get(API_URL + '/robots.txt', (req, res) => {
+  res.sendFile(path.resolve('../frontend/dist/robots.txt'));
 });
 
 // Catch-all route for React Router
